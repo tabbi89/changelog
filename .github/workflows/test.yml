@@ -3,7 +3,7 @@ name: Test
   push:
     branches:
       - master
-      - renovate/**
+      - beta
   pull_request:
     types:
       - opened
