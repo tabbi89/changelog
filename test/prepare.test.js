@@ -18,7 +18,7 @@ test('Create new CHANGELOG.md', async (t) => {
   const changelogPath = path.resolve(cwd, changelogFile);
   const branch = 'master';
 
-  await prepare({}, {cwd, branch: branch, nextRelease: {notes}, logger: t.context.logger});
+  await prepare({}, {cwd, branch, nextRelease: {notes}, logger: t.context.logger});
 
   // Verify the content of the CHANGELOG.md
   t.is((await readFile(changelogPath)).toString(), `${notes}\n`);
@@ -33,7 +33,7 @@ test('Create new changelog with custom path', async (t) => {
   const changelogPath = path.resolve(cwd, 'docs/changelog.txt');
   const branch = 'master';
 
-  await prepare({changelogFile}, {cwd, branch: branch, nextRelease: {notes}, logger: t.context.logger});
+  await prepare({changelogFile}, {cwd, branch, nextRelease: {notes}, logger: t.context.logger});
 
   // Verify the content of the CHANGELOG.md
   t.is((await readFile(changelogPath)).toString(), `${notes}\n`);
@@ -49,7 +49,7 @@ test('Prepend the CHANGELOG.md if there is an existing one', async (t) => {
   await outputFile(changelogPath, 'Initial CHANGELOG');
   const branch = 'master';
 
-  await prepare({}, {cwd, branch: branch, nextRelease: {notes}, logger: t.context.logger});
+  await prepare({}, {cwd, branch, nextRelease: {notes}, logger: t.context.logger});
 
   // Verify the content of the CHANGELOG.md
   t.is((await readFile(changelogPath)).toString(), `${notes}\n\nInitial CHANGELOG\n`);
@@ -65,7 +65,7 @@ test('Prepend title in the CHANGELOG.md if there is none', async (t) => {
   await outputFile(changelogPath, 'Initial CHANGELOG');
   const branch = 'master';
 
-  await prepare({changelogTitle}, {cwd, branch: branch, nextRelease: {notes}, logger: t.context.logger});
+  await prepare({changelogTitle}, {cwd, branch, nextRelease: {notes}, logger: t.context.logger});
 
   t.is((await readFile(changelogPath)).toString(), `${changelogTitle}\n\n${notes}\n\nInitial CHANGELOG\n`);
 });
@@ -79,7 +79,7 @@ test('Keep the title at the top of the CHANGELOG.md', async (t) => {
   await outputFile(changelogPath, `${changelogTitle}\n\nInitial CHANGELOG`);
   const branch = 'master';
 
-  await prepare({changelogTitle}, {cwd, branch: branch, nextRelease: {notes}, logger: t.context.logger});
+  await prepare({changelogTitle}, {cwd, branch, nextRelease: {notes}, logger: t.context.logger});
 
   t.is((await readFile(changelogPath)).toString(), `${changelogTitle}\n\n${notes}\n\nInitial CHANGELOG\n`);
 });
@@ -92,7 +92,7 @@ test.serial('Create new changelog with title if specified', async (t) => {
   const changelogPath = path.resolve(cwd, changelogFile);
   const branch = 'master';
 
-  await prepare({changelogTitle, changelogFile}, {cwd, branch: branch, nextRelease: {notes}, logger: t.context.logger});
+  await prepare({changelogTitle, changelogFile}, {cwd, branch, nextRelease: {notes}, logger: t.context.logger});
 
   t.is((await readFile(changelogPath)).toString(), `${changelogTitle}\n\n${notes}\n`);
 });
