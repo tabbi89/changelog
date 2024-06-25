@@ -1,5 +1,5 @@
 {
-  "name": "@tabbi/changelog",
+  "name": "tabbi/changelog",
   "description": "semantic-release plugin to create or update a changelog file",
   "version": "1.0.0",
   "author": "tabbi",
