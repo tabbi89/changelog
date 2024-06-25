@@ -1,7 +1,7 @@
 {
-  "name": "@semantic-release/changelog",
+  "name": "@tabbi/changelog",
   "description": "semantic-release plugin to create or update a changelog file",
-  "version": "0.0.0-development",
+  "version": "1.0.0",
   "author": "tabbi89 && Pierre Vanduynslager (https://github.com/pvdlg)",
   "ava": {
     "files": [
