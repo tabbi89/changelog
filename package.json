@@ -2,7 +2,7 @@
   "name": "@semantic-release/changelog",
   "description": "semantic-release plugin to create or update a changelog file",
   "version": "0.0.0-development",
-  "author": "Pierre Vanduynslager (https://github.com/pvdlg)",
+  "author": "tabbi89 && Pierre Vanduynslager (https://github.com/pvdlg)",
   "ava": {
     "files": [
       "test/**/*.test.js"
@@ -12,6 +12,7 @@
     "url": "https://github.com/semantic-release/changelog/issues"
   },
   "contributors": [
+    "Tabbi89 <tom@tabbi89.me> (https://tabbi89.me)",
     "Stephan Bönnemann <stephan@boennemann.me> (http://boennemann.me)",
     "Gregor Martynus (https://twitter.com/gr2m)"
   ],
