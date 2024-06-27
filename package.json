@@ -2,7 +2,7 @@
   "name": "@tabbi/changelog",
   "description": "semantic-release plugin to create or update a changelog file",
   "version": "1.0.0",
-  "author": "tabbi",
+  "author": "tabbi89",
   "ava": {
     "files": [
       "test/**/*.test.js"
@@ -92,9 +92,4 @@
       "unicorn/string-content": "off"
     }
   },
-  "renovate": {
-    "extends": [
-      "github>semantic-release/.github:renovate-config"
-    ]
-  }
 }
