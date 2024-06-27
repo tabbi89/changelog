@@ -91,5 +91,5 @@
       "unicorn/no-array-reduce": "off",
       "unicorn/string-content": "off"
     }
-  },
+  }
 }
